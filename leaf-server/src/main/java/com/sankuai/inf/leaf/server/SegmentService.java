@@ -23,9 +23,8 @@ public class SegmentService {
     DruidDataSource dataSource;
     public SegmentService() throws SQLException, InitException {
         Properties properties = PropertyFactory.getProperties();
-        boolean flag = Boolean.parseBoolean(properties.getProperty(Constants.LEAF_SEGMENT_ENABLE, "true"));
+        boolean flag = Boolean.parseBoolean(properties.getProperty(Constants.LEAF_SEGMENT_ENABLE, "false"));
         if (flag) {
-
 
             // Config dataSource
             dataSource = new DruidDataSource();
